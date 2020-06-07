@@ -1,5 +1,5 @@
 echo "Cleaning executables"
-rm *.dpi *.lock *.dyn *.optrpt *_c
+rm *.dpi *.lock *.dyn *.optrpt *_pi
 echo ...
 # Quick Lab
 echo "Compiling and running all Quick Lab exercises"
@@ -62,5 +62,5 @@ echo "Running openmp_pi"
 ./openmp_pi
 echo ...
 echo "Cleaning executables"
-rm *.dpi *.lock *.dyn *.optrpt *_c
+rm *.dpi *.lock *.dyn *.optrpt *_pi
 echo ...
