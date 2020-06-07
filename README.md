@@ -21,6 +21,7 @@ techniques. Take a look on optimization report and check what was optimized.
 <b>Activity 4 – Use Processor Switches</b>
 Compile the example with different SIMD instruction processor extensions(use xSSE4.2, xAVX, xCORE-AVX2, xCORE-AVX512 or xHost options) and IPO. Generate a vectorization report with highest level of details:<br>
 <i>icc -ipo -O2 -xHost -qopt-report=5 -qopt-report-phase=vec pi.c fx.c -o xhost_pi</i><br>
+
 Note that with IPO the optimization reports goes to ipo_out.optrpt by default (if -qopt-report-file option is not set).
 Check vectorization report and look for aby issues reported. Do you see a hint on type conversion and division happening inside a loop?
 
