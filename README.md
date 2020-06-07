@@ -35,8 +35,10 @@ icc may be able to parallelize your loops automatically using OpenMP. Note that 
 TLP (Thread Level Parallelization) and uses processor cores (and hardware threads) for parallelization of serial
 code. However, auto-vectorization is DLP (Data Level Parallelization) and uses wide registers (SSE, AVX, etc.) for
 operation of multiple instructions.
+
 Try to auto-parallelize the code by just enabling a compiler option (no source code changes are required):<br>
 <i>icc -O2 -parallel -qopt-report:3 -qopt-report-phase=par pi.c fx.c -o par_pi_c</i><br>
+
 Check if this code works faster and open an optimization report to understand what is happening.
 Add an IPO option:<br>
 <i>icc -O2 -parallel -qopt-report:3 -qopt-report-phase=par pi.c fx.c -o par_pi_c</i>
@@ -45,7 +47,8 @@ Note that the time measurement doesn't work correct in that case (need to use Op
 Auto-parallelization doesn’t work for all cases. However, this one is trivial and can be done by
 the compiler. Try to parallelize this code yourself. Since it is a simple code add the
 OpenMP* parallel for directive before the loop and care about data races. Please add following directive
-before for loop in pi.c source file:
-#pragma omp parallel for reduction(+:sum) private(x)
+before for loop in pi.c source file:<br>
+<n>#pragma omp parallel for reduction(+:sum) private(x)</n>
+
 Solution is available in pi_par.c. Compile it with no -parallel and -ipo options:<br>
 <i>icc -O2 -qopenmp pi_par.c fx.c -o openmp_pi</i>
