@@ -17,7 +17,7 @@ main()
         sum = 0.0;
 
         t1 = omp_get_wtime();
-//#pragma omp parallel for reduction(+:sum) private(x)
+#pragma omp parallel for reduction(+:sum) private(x)
         for ( i=0; i<N ; i++ ){
           x = h*(i-0.5);
           sum = sum + f(x);
