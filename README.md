@@ -36,7 +36,7 @@ TLP (Thread Level Parallelization) and uses processor cores (and hardware thread
 code. However, auto-vectorization is DLP (Data Level Parallelization) and uses wide registers (SSE, AVX, etc.) for
 operation of multiple instructions.
 Try to auto-parallelize the code by just enabling a compiler option (no source code changes are required):<br>
-<i>icc -O2 -parallel -qopt-report:3 -qopt-report-phase=par pi.c fx.c -o par_pi_c<br>
+<i>icc -O2 -parallel -qopt-report:3 -qopt-report-phase=par pi.c fx.c -o par_pi_c</i><br>
 Check if this code works faster and open an optimization report to understand what is happening.
 Add an IPO option:<br>
 <i>icc -O2 -parallel -qopt-report:3 -qopt-report-phase=par pi.c fx.c -o par_pi_c</i>
