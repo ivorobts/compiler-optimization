@@ -1,7 +1,7 @@
 This is a simple compiler optimization hands-on exercise to learn some basic compiler optimizations. It uses a simple PI calculation code.
 
-Activity 1 – Base measurements
-******************************
+<b>Activity 1 – Base measurements</b>
+
 Compile the code without any optimizations:
 
 icc -O0 pi.c fx.c -o Od_pi_c
