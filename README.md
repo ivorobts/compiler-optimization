@@ -38,11 +38,11 @@ code. However, auto-vectorization is DLP (Data Level Parallelization) and uses w
 operation of multiple instructions.
 
 Try to auto-parallelize the code by just enabling a compiler option (no source code changes are required):<br>
-<i>icc -O2 -parallel -qopt-report:3 -qopt-report-phase=par pi.c fx.c -o par_pi_c</i><br>
+<i>icc -O2 -parallel -qopt-report:3 -qopt-report-phase=par pi.c fx.c -o par_pi</i><br>
 
 Check if this code works faster and open an optimization report to understand what is happening.
 Add an IPO option:<br>
-<i>icc -O2 -parallel -qopt-report:3 -qopt-report-phase=par pi.c fx.c -o par_pi_c</i>
+<i>icc -O2 -parallel -qopt-report:3 -qopt-report-phase=par pi.c fx.c -o par_pi</i>
 Note that the time measurement doesn't work correct in that case (need to use OpenMP specific APIs), but you shoud observe a significant speed-up on the system with many cores.
 
 Auto-parallelization doesn’t work for all cases. However, this one is trivial and can be done by
