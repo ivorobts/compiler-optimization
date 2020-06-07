@@ -1,4 +1,5 @@
-This is a simple compiler optimization hands-on exercise to learn some basic icc compiler optimizations. It uses a simple PI calculation code.
+This is a simple compiler optimization hands-on exercise to learn some basic icc compiler optimizations. It uses a simple PI calculation code located in basic folder. There is also a build_all.sh script to help you with full compiler options and run commands. It is recommended to type commands yourself in order to remember compiler options and find possible issues in case of mistakes.
+
 
 <b>Activity 1 – Base measurements</b>
 Compile the code without any optimizations:<br>
